@@ -88,14 +88,14 @@ export class HeroComponent {
         tasks: [
           {
             title: 'Onboarding docs',
-            tag: 'Design',
+            tag: 'Des',
             dot: 'bg-sky-400',
             initials: 'MP',
             initialsClass: AVATARS[0],
           },
           {
             title: 'Empty state art',
-            tag: 'Design',
+            tag: 'Des',
             dot: 'bg-sky-400',
             initials: 'SO',
             initialsClass: AVATARS[1],
