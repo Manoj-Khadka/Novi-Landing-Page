@@ -1,59 +1,60 @@
-# NoviLanding
+# NOVI Landing Page
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+A marketing landing page for **NOVI** — a project and task management tool for small, fast-moving teams (startups, agencies, product and design teams).
 
-## Development server
+Single-page product site with a dark, calm visual style, built as part of a front-end UI/UX assessment.
 
-To start a local development server, run:
+## Sections
 
-```bash
-ng serve
-```
+| Section | Highlights |
+| --- | --- |
+| Hero | Fixed navbar (nav links, **Start Free**, mobile drawer), headline, dual CTAs, animated product mockup with floating chat / calendar / task cards |
+| Logos | Trusted-by marquee (infinite scroll) |
+| Features | 4 capability cards (Boards, Threads, Timeline, Import) with per-hue icons |
+| Workflow | Ideas → Planning → Execution → Launch timeline with GSAP choreographed reveal, segmented animated spine |
+| Showcase | Scrolling app panes with pill benefits |
+| Stats | Metric counters (animated) |
+| Testimonials | Customer quotes |
+| Pricing | 3 tiers with per-tier visual styling |
+| FAQ | Accessible accordion |
+| CTA | Final conversion banner |
+| Footer | Link groups, newsletter signup, social icons, legal line |
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tech stack
 
-## Code scaffolding
+- **Angular 21** (standalone components, zoneless-ready patterns, signals)
+- **Tailwind CSS v4** (`@tailwindcss/postcss`, theme tokens in `src/styles.css`)
+- **GSAP + ScrollTrigger** — reveal animations, scroll choreography, staggered timelines
+- **lucide-angular** icons
+- **Vitest** for unit tests
+- Self-hosted variable fonts (`Manrope`, `JetBrains Mono`) — no external requests
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Getting started
 
 ```bash
-ng test
+npm install
+npm start        # ng serve  →  http://localhost:4200/
 ```
 
-## Running end-to-end tests
+The dev server hot-reloads on source changes.
 
-For end-to-end (e2e) testing, run:
+## Production build
 
 ```bash
-ng e2e
+npm run build    # ng build --configuration production
+npx ng serve --configuration production    # preview the optimized build locally
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Testing
+
+ng test --watch=false
+
+## Design choices
+
+- **Calm, trust-forward dark theme** — soft violet accent, muted text, gentle gradients; feels like a focused workspace rather than a noisy SaaS page.
+- **Consistent type scale** — H2s unified to `text-4xl md:text-5xl`, one muted body color, mono eyebrows/labels for a technical, tool-like identity.
+- **One shared animation language** — GSAP `fromTo` reveals with `once: true` triggers; hover lifts and underlines follow the same easing and spacing across cards, buttons and links.
+- **Perceived performance** — 0 `<img>` elements (all visuals are CSS/SVG mockups), self-hosted fonts, no external requests.
+- **Accessibility** — semantic landmarks, `aria-label`s on icon-only controls, keyboard-usable drawer and accordion, `prefers-reduced-motion` support throughout.

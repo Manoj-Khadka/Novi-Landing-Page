@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
-import { Lightbulb, ListChecks, Zap, Rocket, ChevronDown } from 'lucide-angular';
+import { Lightbulb, ListChecks, Zap, Rocket } from 'lucide-angular';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -25,7 +25,6 @@ export class WorkflowComponent implements AfterViewInit {
   protected readonly ListChecks = ListChecks;
   protected readonly Zap = Zap;
   protected readonly Rocket = Rocket;
-  protected readonly ChevronDown = ChevronDown;
 
   protected readonly steps = [
     {

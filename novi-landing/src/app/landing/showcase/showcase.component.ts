@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
-import { Check, CheckCircle2 } from 'lucide-angular';
+import { CheckCircle2 } from 'lucide-angular';
 
 @Component({
   selector: 'app-showcase',
@@ -10,7 +10,6 @@ import { Check, CheckCircle2 } from 'lucide-angular';
   styleUrl: './showcase.component.scss'
 })
 export class ShowcaseComponent {
-  protected readonly Check = Check;
   protected readonly CheckCircle2 = CheckCircle2;
 
   protected readonly rows = [
