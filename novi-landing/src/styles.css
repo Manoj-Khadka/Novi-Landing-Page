@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@source './app/**/*.{html,ts}';
+
+@theme {
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+
+  --color-base: #0b1020;
+  --color-ink: #0e1428;
+  --color-panel: #111827;
+  --color-raise: #1a2337;
+  --color-line: rgba(255, 255, 255, 0.08);
+  --color-line-soft: rgba(255, 255, 255, 0.05);
+  --color-fg: #f8fafc;
+  --color-muted: #9cabc6;
+  --color-dim: #64748b;
+  --color-accent: #8b5cf6;
+  --color-accent-soft: #a78bfa;
+  --color-accent-deep: #6d28d9;
+  --color-accent-cyan: #22d3ee;
+  --color-glow: #a78bfa;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: rgba(139, 92, 246, 0.35);
+  color: #fff;
+}
+
+@layer components {
+  .container-nv {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs font-medium uppercase tracking-[0.18em] text-accent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-all duration-200 select-none bg-accent text-white shadow-[0_0_24px_-6px_rgba(139,92,246,0.7)] hover:bg-accent-soft hover:shadow-[0_0_32px_-6px_rgba(167,139,250,0.8)] active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-all duration-200 select-none border border-line bg-panel/60 text-fg hover:border-white/20 hover:bg-raise/80 active:scale-[0.98];
+  }
+
+  .card-line {
+    @apply rounded-2xl border border-line bg-panel;
+  }
+}
+
+.mask-fade-b {
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.glass {
+  background: rgba(11, 16, 32, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #f8fafc 0%, #c4b5fd 40%, #8b5cf6 70%, #22d3ee 105%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,40 @@
+<section id="workflow" class="relative py-24 md:py-32">
+  <div class="container-nv">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">Workflow</p>
+      <h2 class="mt-4 text-4xl font-bold tracking-[-0.02em] text-fg md:text-5xl">
+        One flow, from idea to <span class="text-gradient">shipped</span>
+      </h2>
+      <p class="mt-5 text-lg text-muted">
+        NOVI fits the way your team already works — it just removes the handoffs between tools.
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="reveal group card-line relative p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40" *ngFor="let step of steps; index as i" [attr.data-delay]="i">
+        <div class="flex items-center justify-between">
+          <span
+            [class]="
+              'inline-grid h-11 w-11 place-items-center rounded-xl border border-line bg-gradient-to-br ' +
+              step.tint
+            "
+          >
+            <lucide-angular [name]="step.icon" [size]="21" [strokeWidth]="1.75" />
+          </span>
+          <span class="font-mono text-sm text-dim">{{ step.number }}</span>
+        </div>
+        <h3 class="mt-5 text-lg font-semibold tracking-tight text-fg">{{ step.title }}</h3>
+        <p class="mt-2 text-[15px] leading-relaxed text-muted">{{ step.body }}</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-12 flex items-center justify-center gap-3 text-sm text-dim">
+      <svg class="h-4 w-4 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 2a10 10 0 0 0 0 20V2z"></path>
+        <path d="M2 12h20"></path>
+      </svg>
+      <span>Every step lives in the same workspace — no tab-hopping, ever.</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,429 @@
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 164.34 kB | 
+styles.css          | styles        |  70.17 kB | 
+
+                    | Initial total | 234.51 kB
+
+Application bundle generation complete. [1.952 seconds] - 2026-09-06T04:00:51.860Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://127.0.0.1:4200/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [2.064 seconds] - 2026-09-06T04:10:00.062Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'stars' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:24:31:
+[37m      24 │               *ngFor="let s of [32mstars[37m"
+         ╵                                [32m~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'Star' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:25:22:
+[37m      25 │               [name]="[32mStar[37m"
+         ╵                       [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2551: Property 'Lock' does not exist on type 'HeroComponent'. Did you mean 'Clock'?[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:82:38:
+[37m      82 │ ...      <lucide-angular [name]="[32mLock[37m" [size]="11" [strokeWidth]="...
+         ╵                                  [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'board' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:107:43:
+[37m      107 │ ...    <div *ngFor="let lane of [32mboard[37m.lanes" class="flex min-w-0 ...
+          ╵                                 [32m~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'chat' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:152:42:
+[37m      152 │ ...     <div *ngFor="let msg of [32mchat[37m.messages" class="flex items-...
+          ╵                                 [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'Smile' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:171:42:
+[37m      171 │ ...     <lucide-angular [name]="[32mSmile[37m" [size]="13" [strokeWidth]=...
+          ╵                                 [32m~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'Send' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:173:42:
+[37m      173 │ ...     <lucide-angular [name]="[32mSend[37m" [size]="13" [strokeWidth]="...
+          ╵                                 [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'progress' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:182:78:
+[37m      182 │ ...11px] font-semibold text-accent-soft">{{ [32mprogress[37m.total }}</span>
+          ╵                                             [32m~~~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'progress' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:186:42:
+[37m      186 │                   <div *ngFor="let row of [32mprogress[37m.rows">
+          ╵                                           [32m~~~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'deadlines' does not exist on type 'HeroComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:211:42:
+[37m      211 │ ...   <div *ngFor="let row of [32mdeadlines[37m.rows" class="flex items-c...
+          ╵                               [32m~~~~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:66:15:
+[37m      66 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [1.153 seconds] - 2026-09-06T04:10:18.782Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'icon' does not exist on type 'DeadlineRow'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:215:28:
+[37m      215 │                         row.[32micon[37m
+          ╵                             [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.755 seconds] - 2026-09-06T04:10:20.775Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'icon' does not exist on type 'DeadlineRow'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:215:28:
+[37m      215 │                         row.[32micon[37m
+          ╵                             [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.854 seconds] - 2026-09-06T04:10:25.805Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'icon' does not exist on type 'DeadlineRow'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:215:28:
+[37m      215 │                         row.[32micon[37m
+          ╵                             [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.675 seconds] - 2026-09-06T04:10:28.933Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'icon' does not exist on type 'DeadlineRow'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:215:28:
+[37m      215 │                         row.[32micon[37m
+          ╵                             [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.606 seconds] - 2026-09-06T04:10:35.971Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'icon' does not exist on type 'DeadlineRow'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:215:28:
+[37m      215 │                         row.[32micon[37m
+          ╵                             [32m~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 166.15 kB | 
+styles.css          | styles        |  74.54 kB | 
+
+                    | Initial total | 240.69 kB
+
+Application bundle generation complete. [0.889 seconds] - 2026-09-06T04:11:19.993Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 166.25 kB | 
+
+Application bundle generation complete. [4.341 seconds] - 2026-09-06T04:14:02.208Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 166.34 kB | 
+
+Application bundle generation complete. [5.700 seconds] - 2026-09-06T04:14:07.990Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 166.25 kB | 
+
+Application bundle generation complete. [2.615 seconds] - 2026-09-06T04:15:04.608Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 166.16 kB | 
+
+Application bundle generation complete. [5.020 seconds] - 2026-09-06T04:15:11.322Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 166.16 kB | 
+styles.css          | styles        |  74.54 kB | 
+
+                    | Initial total | 240.70 kB
+
+Application bundle generation complete. [0.626 seconds] - 2026-09-06T04:20:19.071Z
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [1.311 seconds] - 2026-09-06T04:22:46.404Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:239:2:
+[37m      239 │   [32m</div>[37m
+          ╵   [32m~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.684 seconds] - 2026-09-06T04:22:48.421Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:239:2:
+[37m      239 │   [32m</div>[37m
+          ╵   [32m~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.878 seconds] - 2026-09-06T04:22:52.688Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:239:2:
+[37m      239 │   [32m</div>[37m
+          ╵   [32m~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.630 seconds] - 2026-09-06T04:23:05.284Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:239:2:
+[37m      239 │   [32m</div>[37m
+          ╵   [32m~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.666 seconds] - 2026-09-06T04:23:12.138Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mNG5002: Unexpected closing tag "div". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/hero/hero.component.html:239:2:
+[37m      239 │   [32m</div>[37m
+          ╵   [32m~~~~~~[0m
+
+  Error occurs in the template of component HeroComponent.
+
+    src/app/landing/hero/hero.component.ts:64:15:
+[37m      64 │   templateUrl: [32m'./hero.component.html'[37m,
+         ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 165.47 kB | 
+styles.css          | styles        |  74.54 kB | 
+
+                    | Initial total | 240.01 kB
+
+Application bundle generation complete. [1.605 seconds] - 2026-09-06T04:25:43.175Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 166.00 kB | 
+styles.css          | styles        |  75.13 kB | 
+
+                    | Initial total | 241.13 kB
+
+Application bundle generation complete. [3.451 seconds] - 2026-09-06T04:30:53.268Z
+
+Stylesheet update sent to client(s).
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 178.72 kB | 
+styles.css          | styles        |  77.87 kB | 
+
+                    | Initial total | 256.58 kB
+
+Application bundle generation complete. [1.438 seconds] - 2026-09-06T04:31:07.924Z
+
+Stylesheet update sent to client(s).
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 178.13 kB | 
+
+Application bundle generation complete. [1.100 seconds] - 2026-09-06T04:35:04.214Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 178.15 kB | 
+
+Application bundle generation complete. [1.059 seconds] - 2026-09-06T04:35:08.049Z
+
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 178.16 kB | 
+
+Application bundle generation complete. [2.910 seconds] - 2026-09-06T04:35:20.229Z
+
+Component update sent to client(s).

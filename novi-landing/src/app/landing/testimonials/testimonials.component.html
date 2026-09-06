@@ -1,0 +1,39 @@
+<section id="customers" class="relative py-24 md:py-32">
+  <div class="container-nv">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <p class="section-eyebrow">Customers</p>
+      <h2 class="mt-4 text-4xl font-bold tracking-[-0.02em] text-fg md:text-5xl">
+        Teams ship better with
+        <span class="text-gradient">NOVI</span>
+      </h2>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3">
+      <figure
+        *ngFor="let t of testimonials; index as i"
+        class="reveal card-line flex flex-col p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40"
+        [attr.data-delay]="i"
+      >
+        <div class="flex gap-0.5 text-amber-300">
+          <span *ngFor="let _ of [0, 1, 2, 3, 4]">&#9733;</span>
+        </div>
+        <blockquote class="mt-4 flex-1 text-[15px] leading-relaxed text-fg/90">
+          &ldquo;{{ t.quote }}&rdquo;
+        </blockquote>
+        <figcaption class="mt-6 flex items-center gap-3">
+          <span
+            [class]="
+              'grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br text-xs font-bold text-white ' +
+              t.avatarClass
+            "
+            >{{ t.initials }}</span
+          >
+          <div class="leading-tight">
+            <p class="text-sm font-semibold text-fg">{{ t.name }}</p>
+            <p class="text-[13px] text-dim">{{ t.role }}</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(60px, -40px, 0) scale(1.15);
+  }
+}
+
+@keyframes drift-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-50px, 50px, 0) scale(1.1);
+  }
+}
+
+.animate-drift {
+  animation: drift 14s ease-in-out infinite;
+}
+
+.animate-drift-slow {
+  animation: drift-slow 18s ease-in-out infinite;
+}
+
+.fill-amber-400 ::ng-deep path {
+  fill: currentColor;
+}
+
+.hero-item,
+.hero-mockup,
+.hero-card {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-drift,
+  .animate-drift-slow {
+    animation: none;
+  }
+  .hero-item,
+  .hero-mockup,
+  .hero-card {
+    opacity: 1;
+  }
+}
