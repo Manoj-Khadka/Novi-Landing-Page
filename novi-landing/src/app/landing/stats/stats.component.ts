@@ -10,10 +10,10 @@ import gsap from 'gsap';
 })
 export class StatsComponent implements AfterViewInit {
   protected readonly stats = [
-    { target: 4000, suffix: '+', decimals: 0, label: 'product teams ship with NOVI' },
-    { target: 32, suffix: '%', decimals: 0, label: 'faster average project cycles' },
-    { target: 6, suffix: '', decimals: 0, label: 'tools replaced per workflow' },
-    { target: 99.9, suffix: '%', decimals: 1, label: 'uptime, backed by SLA' }
+    { target: 5000, suffix: '+', decimals: 0, label: 'Teams' },
+    { target: 40, suffix: '%', decimals: 0, label: 'Faster Delivery' },
+    { target: 99.9, suffix: '%', decimals: 1, label: 'Uptime' },
+    { target: 4.9, suffix: '', decimals: 1, label: 'Rating' }
   ];
 
   constructor(private readonly el: ElementRef<HTMLElement>) {}
@@ -31,10 +31,7 @@ export class StatsComponent implements AfterViewInit {
       const decimals = parseInt(targetEl.dataset['decimals'] ?? '0', 10);
 
       const setValue = (value: number) => {
-        targetEl.textContent = value.toLocaleString('en-US', {
-          minimumFractionDigits: decimals,
-          maximumFractionDigits: decimals
-        });
+        targetEl.textContent = value.toFixed(decimals);
       };
 
       if (reduced) {

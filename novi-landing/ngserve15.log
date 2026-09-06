@@ -585,3 +585,11 @@ Application bundle generation complete. [0.713 seconds] - 2026-09-06T04:44:21.04
 
 Stylesheet update sent to client(s).
 Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 186.44 kB | 
+
+Application bundle generation complete. [1.536 seconds] - 2026-09-06T04:48:56.937Z
+
+Page reload sent to client(s).
