@@ -12,74 +12,80 @@
     </div>
 
     <div class="wf-rail relative mx-auto mt-16 max-w-3xl">
-      <div class="wf-track absolute bottom-8 left-6 top-8 w-px -translate-x-1/2 bg-line" aria-hidden="true">
-        <div class="wf-track-fill h-full w-full origin-top scale-y-0 bg-gradient-to-b from-accent via-accent-cyan to-emerald-400"></div>
+      <div class="wf-track-seg absolute left-6 w-[2px] -translate-x-1/2 bg-line" aria-hidden="true">
+        <div class="wf-track-fill h-full w-full origin-top scale-y-0 bg-gradient-to-b from-accent to-accent-cyan"></div>
+      </div>
+      <div class="wf-track-seg absolute left-6 w-[2px] -translate-x-1/2 bg-line" aria-hidden="true">
+        <div class="wf-track-fill h-full w-full origin-top scale-y-0 bg-gradient-to-b from-accent-cyan to-amber-400"></div>
+      </div>
+      <div class="wf-track-seg absolute left-6 w-[2px] -translate-x-1/2 bg-line" aria-hidden="true">
+        <div class="wf-track-fill h-full w-full origin-top scale-y-0 bg-gradient-to-b from-amber-400 to-emerald-400"></div>
       </div>
 
-      <div class="grid grid-cols-[48px_1fr] gap-x-6 gap-y-4">
+      <div class="wf-step group relative flex items-center gap-4 sm:gap-6">
         <span
-          class="wf-ico relative z-10 grid h-12 w-12 place-items-center rounded-2xl border border-line bg-gradient-to-br from-accent/25 to-accent/5 text-accent-soft shadow-[0_10px_30px_-12px_rgba(139,92,246,0.55)]"
+          class="wf-ico relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-line bg-gradient-to-br from-accent/25 to-accent/5 text-accent-soft shadow-[0_10px_30px_-12px_rgba(139,92,246,0.55)] transition duration-300"
         >
           <lucide-angular [name]="steps[0].icon" [size]="24" [strokeWidth]="1.75" />
         </span>
-        <div class="wf-card rounded-2xl border border-line bg-panel/60 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]">
+        <div class="wf-card relative z-10 flex-1 rounded-2xl border border-line bg-panel/60 p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)] sm:p-6">
           <div class="flex items-center justify-between gap-4">
             <h3 class="text-lg font-semibold tracking-tight text-fg">{{ steps[0].title }}</h3>
             <span class="font-mono text-sm text-dim">{{ steps[0].number }}</span>
           </div>
           <p class="mt-2 text-base leading-relaxed text-muted">{{ steps[0].body }}</p>
         </div>
+      </div>
 
-        <div class="wf-arrow col-span-full flex h-10 items-center pl-2">
-          <span class="grid h-8 w-8 place-items-center rounded-full border border-line bg-panel text-accent-soft">
-            <lucide-angular [name]="ChevronDown" [size]="16" [strokeWidth]="2" />
-          </span>
-        </div>
+      <div class="wf-node-wrap relative flex h-8 items-center justify-start pl-5" aria-hidden="true">
+        <span class="wf-node z-10 h-2 w-2 rounded-full bg-gradient-to-b from-dim to-line"></span>
+      </div>
 
+      <div class="wf-step group relative flex items-center gap-4 sm:gap-6">
         <span
-          class="wf-ico relative z-10 grid h-12 w-12 place-items-center rounded-2xl border border-line bg-gradient-to-br from-sky-500/25 to-sky-500/5 text-sky-300 shadow-[0_10px_30px_-12px_rgba(14,165,233,0.55)]"
+          class="wf-ico relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-line bg-gradient-to-br from-sky-500/25 to-sky-500/5 text-sky-300 shadow-[0_10px_30px_-12px_rgba(14,165,233,0.55)] transition duration-300"
         >
           <lucide-angular [name]="steps[1].icon" [size]="24" [strokeWidth]="1.75" />
         </span>
-        <div class="wf-card rounded-2xl border border-line bg-panel/60 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]">
+        <div class="wf-card relative z-10 flex-1 rounded-2xl border border-line bg-panel/60 p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)] sm:p-6">
           <div class="flex items-center justify-between gap-4">
             <h3 class="text-lg font-semibold tracking-tight text-fg">{{ steps[1].title }}</h3>
             <span class="font-mono text-sm text-dim">{{ steps[1].number }}</span>
           </div>
           <p class="mt-2 text-base leading-relaxed text-muted">{{ steps[1].body }}</p>
         </div>
+      </div>
 
-        <div class="wf-arrow col-span-full flex h-10 items-center pl-2">
-          <span class="grid h-8 w-8 place-items-center rounded-full border border-line bg-panel text-accent-soft">
-            <lucide-angular [name]="ChevronDown" [size]="16" [strokeWidth]="2" />
-          </span>
-        </div>
+      <div class="wf-node-wrap relative flex h-8 items-center justify-start pl-5" aria-hidden="true">
+        <span class="wf-node z-10 h-2 w-2 rounded-full bg-gradient-to-b from-dim to-line"></span>
+      </div>
 
+      <div class="wf-step group relative flex items-center gap-4 sm:gap-6">
         <span
-          class="wf-ico relative z-10 grid h-12 w-12 place-items-center rounded-2xl border border-line bg-gradient-to-br from-amber-500/25 to-amber-500/5 text-amber-300 shadow-[0_10px_30px_-12px_rgba(245,158,11,0.55)]"
+          class="wf-ico relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-line bg-gradient-to-br from-amber-500/25 to-amber-500/5 text-amber-300 shadow-[0_10px_30px_-12px_rgba(245,158,11,0.55)] transition duration-300"
         >
           <lucide-angular [name]="steps[2].icon" [size]="24" [strokeWidth]="1.75" />
         </span>
-        <div class="wf-card rounded-2xl border border-line bg-panel/60 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]">
+        <div class="wf-card relative z-10 flex-1 rounded-2xl border border-line bg-panel/60 p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)] sm:p-6">
           <div class="flex items-center justify-between gap-4">
             <h3 class="text-lg font-semibold tracking-tight text-fg">{{ steps[2].title }}</h3>
             <span class="font-mono text-sm text-dim">{{ steps[2].number }}</span>
           </div>
           <p class="mt-2 text-base leading-relaxed text-muted">{{ steps[2].body }}</p>
         </div>
+      </div>
 
-        <div class="wf-arrow col-span-full flex h-10 items-center pl-2">
-          <span class="grid h-8 w-8 place-items-center rounded-full border border-line bg-panel text-accent-soft">
-            <lucide-angular [name]="ChevronDown" [size]="16" [strokeWidth]="2" />
-          </span>
-        </div>
+      <div class="wf-node-wrap relative flex h-8 items-center justify-start pl-5" aria-hidden="true">
+        <span class="wf-node z-10 h-2 w-2 rounded-full bg-gradient-to-b from-dim to-line"></span>
+      </div>
 
+      <div class="wf-step group relative flex items-center gap-4 sm:gap-6">
         <span
-          class="wf-ico relative z-10 grid h-12 w-12 place-items-center rounded-2xl border border-line bg-gradient-to-br from-emerald-500/25 to-emerald-500/5 text-emerald-300 shadow-[0_10px_30px_-12px_rgba(16,185,129,0.55)]"
+          class="wf-ico relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-line bg-gradient-to-br from-emerald-500/25 to-emerald-500/5 text-emerald-300 shadow-[0_10px_30px_-12px_rgba(16,185,129,0.55)] transition duration-300"
         >
           <lucide-angular [name]="steps[3].icon" [size]="24" [strokeWidth]="1.75" />
         </span>
-        <div class="wf-card rounded-2xl border border-line bg-panel/60 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]">
+        <div class="wf-card relative z-10 flex-1 rounded-2xl border border-line bg-panel/60 p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise/70 hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)] sm:p-6">
           <div class="flex items-center justify-between gap-4">
             <h3 class="text-lg font-semibold tracking-tight text-fg">{{ steps[3].title }}</h3>
             <span class="font-mono text-sm text-dim">{{ steps[3].number }}</span>
