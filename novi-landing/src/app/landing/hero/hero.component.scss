@@ -20,10 +20,12 @@
 
 .animate-drift {
   animation: drift 14s ease-in-out infinite;
+  will-change: transform;
 }
 
 .animate-drift-slow {
   animation: drift-slow 18s ease-in-out infinite;
+  will-change: transform;
 }
 
 .fill-amber-400 ::ng-deep path {
@@ -34,6 +36,7 @@
 .hero-mockup,
 .hero-card {
   opacity: 0;
+  will-change: transform, opacity;
 }
 
 @media (prefers-reduced-motion: reduce) {

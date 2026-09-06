@@ -1352,3 +1352,84 @@ Application bundle generation complete. [0.836 seconds] - 2026-09-06T05:59:13.76
 
 Stylesheet update sent to client(s).
 Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names  | Raw size
+styles.css          | styles | 75.72 kB | 
+
+Application bundle generation complete. [0.147 seconds] - 2026-09-06T06:09:07.659Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+
+No output file changes.
+
+Application bundle generation complete. [0.104 seconds] - 2026-09-06T06:09:14.109Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 187.46 kB | 
+styles.css          | styles        |  77.05 kB | 
+
+                    | Initial total | 264.50 kB
+
+Application bundle generation complete. [2.097 seconds] - 2026-09-06T06:09:34.074Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 187.51 kB | 
+
+Application bundle generation complete. [2.925 seconds] - 2026-09-06T06:09:38.175Z
+
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 187.62 kB | 
+
+Application bundle generation complete. [0.917 seconds] - 2026-09-06T06:09:39.108Z
+
+Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 187.69 kB | 
+
+Application bundle generation complete. [0.619 seconds] - 2026-09-06T06:09:44.310Z
+
+Component update sent to client(s).
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [chan receive]:
+github.com/evanw/esbuild/internal/helpers.(*ThreadSafeWaitGroup).Wait(...)
+	github.com/evanw/esbuild/internal/helpers/waitgroup.go:36
+main.runService.func2()
+	github.com/evanw/esbuild/cmd/esbuild/service.go:114 +0x8c
+main.runService(0x1)
+	github.com/evanw/esbuild/cmd/esbuild/service.go:160 +0x560
+main.main()
+	github.com/evanw/esbuild/cmd/esbuild/main.go:252 +0xb5c
+
+goroutine 49 [chan receive]:
+main.runService.func1()
+	github.com/evanw/esbuild/cmd/esbuild/service.go:98 +0x40
+created by main.runService in goroutine 1
+	github.com/evanw/esbuild/cmd/esbuild/service.go:97 +0x188
+
+goroutine 50 [chan receive]:
+main.(*serviceType).sendRequest(0x2ca16bd0a060, {0x100b7cfc0, 0x2ca16bbfa9c0})
+	github.com/evanw/esbuild/cmd/esbuild/service.go:192 +0x134
+main.runService.func3()
+	github.com/evanw/esbuild/cmd/esbuild/service.go:125 +0x44
+created by main.runService in goroutine 1
+	github.com/evanw/esbuild/cmd/esbuild/service.go:122 +0x2a8
+npm notice
+npm notice New major version of npm available! 11.12.1 -> 12.0.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.0.2
+npm notice To update run: npm install -g npm@12.0.2
+npm notice
