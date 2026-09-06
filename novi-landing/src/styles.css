@@ -89,7 +89,7 @@ body {
   }
 
   .link-underline--inset::after {
-    inset-inline: 0.875rem;
+    inset-inline: 1rem;
   }
 }
 

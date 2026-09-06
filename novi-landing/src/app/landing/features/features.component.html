@@ -1,4 +1,4 @@
-<section id="features" class="relative py-24 md:py-32">
+<section id="features" class="relative py-16">
   <div class="container-nv">
     <div class="reveal mx-auto max-w-2xl text-center">
       <p class="section-eyebrow">Features</p>
@@ -6,16 +6,16 @@
         Everything your team needs
         <span class="text-gradient">in one place</span>
       </h2>
-      <p class="mt-5 text-lg text-muted">
+      <p class="mt-6 text-lg text-muted">
         Everything your team touches lives in NOVI — so the work, the plan and the people stay
         together.
       </p>
     </div>
 
-    <div class="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2">
+    <div class="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
       <div
         *ngFor="let feature of features; index as i"
-        class="reveal group card-line p-7 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]"
+        class="reveal group card-line p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-raise hover:shadow-[0_20px_60px_-20px_rgba(139,92,246,0.35)]"
         [attr.data-delay]="i % 2"
       >
         <span
@@ -26,8 +26,8 @@
         >
           <lucide-angular [name]="feature.icon" [size]="21" [strokeWidth]="1.75" />
         </span>
-        <h3 class="mt-5 text-lg font-semibold tracking-tight text-fg">{{ feature.title }}</h3>
-        <p class="mt-2 text-[15px] leading-relaxed text-muted">{{ feature.body }}</p>
+        <h3 class="mt-6 text-lg font-semibold tracking-tight text-fg">{{ feature.title }}</h3>
+        <p class="mt-2 text-base leading-relaxed text-muted">{{ feature.body }}</p>
       </div>
     </div>
   </div>

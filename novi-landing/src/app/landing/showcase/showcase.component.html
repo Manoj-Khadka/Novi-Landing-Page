@@ -1,16 +1,16 @@
-<section id="product" class="relative py-24 md:py-32">
+<section id="product" class="relative py-16">
   <div class="pointer-events-none absolute inset-0" aria-hidden="true">
     <div class="absolute right-0 top-1/4 h-96 w-96 rounded-full bg-accent/10 blur-[120px]"></div>
   </div>
 
-  <div class="container-nv space-y-28 md:space-y-36">
+  <div class="container-nv space-y-16">
     <div *ngFor="let row of rows; index as i" class="reveal grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
       <div [class.lg:order-2]="row.reverse">
         <p class="section-eyebrow">{{ row.eyebrow }}</p>
-        <h2 class="mt-4 text-3xl font-bold tracking-[-0.02em] text-fg md:text-4xl">{{ row.title }}</h2>
+        <h2 class="mt-4 text-4xl font-bold tracking-[-0.02em] text-fg md:text-5xl">{{ row.title }}</h2>
         <p class="mt-4 text-lg leading-relaxed text-muted">{{ row.body }}</p>
-        <ul class="mt-7 space-y-3">
-          <li *ngFor="let bullet of row.bullets" class="flex items-start gap-3 text-[15px] text-fg/90">
+        <ul class="mt-8 space-y-4">
+          <li *ngFor="let bullet of row.bullets" class="flex items-start gap-4 text-base text-fg/90">
             <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-accent/15">
               <lucide-angular [name]="row.icon" [size]="12" [strokeWidth]="2.5" class="text-accent-soft" />
             </span>

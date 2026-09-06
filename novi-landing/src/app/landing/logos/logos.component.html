@@ -1,4 +1,4 @@
-<section class="border-y border-line-soft py-14">
+<section class="border-y border-line-soft py-16">
   <p class="text-center font-mono text-xs font-medium uppercase tracking-[0.2em] text-dim">
     Powering 4,000+ product teams
   </p>
@@ -6,10 +6,10 @@
     class="marquee mx-auto mt-8 max-w-5xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
   >
     <div class="marquee-track flex w-max items-center">
-      <div class="flex items-center gap-14 pr-14">
+      <div class="flex items-center gap-12 pr-12">
         <span *ngFor="let item of logos" [class]="item.class" class="whitespace-nowrap text-muted/70 transition-colors hover:text-fg">{{ item.name }}</span>
       </div>
-      <div class="flex items-center gap-14 pr-14" aria-hidden="true">
+      <div class="flex items-center gap-12 pr-12" aria-hidden="true">
         <span *ngFor="let item of logos" [class]="item.class" class="whitespace-nowrap text-muted/70 transition-colors hover:text-fg">{{ item.name }}</span>
       </div>
     </div>
