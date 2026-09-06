@@ -108,7 +108,12 @@ export class LandingComponent implements AfterViewInit {
             duration: 0.75,
             ease: 'power2.out',
             delay: parseInt(el.dataset['delay'] ?? '0', 10) * 0.1,
-            scrollTrigger: { trigger: el, start: 'top 88%', once: true }
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+            onComplete: () => {
+              el.style.translate = '';
+              el.style.scale = '';
+              el.style.rotate = '';
+            }
           }
         );
       });

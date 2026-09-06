@@ -96,7 +96,14 @@ export class WorkflowComponent implements AfterViewInit {
           arrows,
           { scale: 0, opacity: 0, duration: 0.35, stagger: 0.22, ease: 'back.out(2.2)' },
           '-=0.6'
-        );
+        )
+        .eventCallback('onComplete', () => {
+          sec.querySelectorAll<HTMLElement>('.wf-card, .wf-ico, .wf-arrow, .wf-track-fill').forEach((el) => {
+            el.style.translate = '';
+            el.style.scale = '';
+            el.style.rotate = '';
+          });
+        });
     });
   }
 }
