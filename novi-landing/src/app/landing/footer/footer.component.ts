@@ -1,35 +1,32 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule } from 'lucide-angular';
-import { Github, Twitter, Linkedin } from 'lucide-angular';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  protected readonly Github = Github;
-  protected readonly Twitter = Twitter;
-  protected readonly Linkedin = Linkedin;
+  protected subscribed = false;
 
   protected readonly columns = [
     {
       title: 'Product',
-      links: ['Features', 'Pricing', 'Integrations', 'Changelog', 'Download']
+      links: ['Features', 'Pricing', 'Integrations']
     },
     {
       title: 'Company',
-      links: ['About', 'Customers', 'Careers', 'Blog', 'Contact']
+      links: ['About', 'Careers', 'Blog']
     },
     {
       title: 'Resources',
-      links: ['Docs', 'API', 'Community', 'Guides', 'Status']
-    },
-    {
-      title: 'Legal',
-      links: ['Privacy', 'Terms', 'Security', 'DPA']
+      links: ['Documentation', 'Support', 'Community']
     }
   ];
+
+  protected subscribe(event: Event): void {
+    event.preventDefault();
+    this.subscribed = true;
+  }
 }
