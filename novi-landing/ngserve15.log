@@ -427,3 +427,161 @@ main.js             | main  | 178.16 kB |
 Application bundle generation complete. [2.910 seconds] - 2026-09-06T04:35:20.229Z
 
 Component update sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [1.447 seconds] - 2026-09-06T04:40:43.019Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ChevronDown' does not exist on type 'WorkflowComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.html:35:36:
+[37m      35 │ ...  <lucide-angular [name]="[32mChevronDown[37m" [size]="16" [strokeWidth...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WorkflowComponent.
+
+    src/app/landing/workflow/workflow.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./workflow.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ChevronDown' does not exist on type 'WorkflowComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.html:54:36:
+[37m      54 │ ...  <lucide-angular [name]="[32mChevronDown[37m" [size]="16" [strokeWidth...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WorkflowComponent.
+
+    src/app/landing/workflow/workflow.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./workflow.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'ChevronDown' does not exist on type 'WorkflowComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.html:73:36:
+[37m      73 │ ...  <lucide-angular [name]="[32mChevronDown[37m" [size]="16" [strokeWidth...
+         ╵                              [32m~~~~~~~~~~~[0m
+
+  Error occurs in the template of component WorkflowComponent.
+
+    src/app/landing/workflow/workflow.component.ts:9:15:
+[37m      9 │   templateUrl: [32m'./workflow.component.html'[37m,
+        ╵                [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [1.562 seconds] - 2026-09-06T04:40:51.045Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:66:8:
+[37m      66 │         [32msec.querySelectorAll<HTMLElement>('.wf-card, .wf-ico, .wf-[37m...
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'el' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:66:99:
+[37m      66 │ ...('.wf-card, .wf-ico, .wf-arrow, .wf-track-fill').forEach(([32mel[37m) => {
+         ╵                                                              [32m~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:73:20:
+[37m      73 │       const icons = [32msec.querySelectorAll<HTMLElement>('.wf-ico')[37m;
+         ╵                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:74:20:
+[37m      74 │       const cards = [32msec.querySelectorAll<HTMLElement>('.wf-card')[37m;
+         ╵                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:75:21:
+[37m      75 │       const arrows = [32msec.querySelectorAll<HTMLElement>('.wf-arrow')[37m;
+         ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:76:19:
+[37m      76 │       const fill = [32msec.querySelector<HTMLElement>('.wf-track-fill')[37m;
+         ╵                    [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.723 seconds] - 2026-09-06T04:40:53.784Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:64:8:
+[37m      64 │         [32msec.querySelectorAll<HTMLElement>('.wf-card, .wf-ico, .wf-[37m...
+         ╵         [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS7006: Parameter 'el' implicitly has an 'any' type.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:64:99:
+[37m      64 │ ...('.wf-card, .wf-ico, .wf-arrow, .wf-track-fill').forEach(([32mel[37m) => {
+         ╵                                                              [32m~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:71:20:
+[37m      71 │       const icons = [32msec.querySelectorAll<HTMLElement>('.wf-ico')[37m;
+         ╵                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:72:20:
+[37m      72 │       const cards = [32msec.querySelectorAll<HTMLElement>('.wf-card')[37m;
+         ╵                     [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:73:21:
+[37m      73 │       const arrows = [32msec.querySelectorAll<HTMLElement>('.wf-arrow')[37m;
+         ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2347: Untyped function calls may not accept type arguments.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/landing/workflow/workflow.component.ts:74:19:
+[37m      74 │       const fill = [32msec.querySelector<HTMLElement>('.wf-track-fill')[37m;
+         ╵                    [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 186.60 kB | 
+styles.css          | styles        |  80.85 kB | 
+
+                    | Initial total | 267.45 kB
+
+Application bundle generation complete. [1.027 seconds] - 2026-09-06T04:42:00.469Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 186.62 kB | 
+styles.css          | styles        |  80.95 kB | 
+
+                    | Initial total | 267.57 kB
+
+Application bundle generation complete. [0.713 seconds] - 2026-09-06T04:44:21.041Z
+
+Stylesheet update sent to client(s).
+Component update sent to client(s).

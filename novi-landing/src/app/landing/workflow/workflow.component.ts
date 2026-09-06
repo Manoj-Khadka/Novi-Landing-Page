@@ -1,7 +1,16 @@
-import { Component } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  inject
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
-import { Inbox, ListChecks, Zap, Rocket } from 'lucide-angular';
+import { Lightbulb, ListChecks, Zap, Rocket, ChevronDown } from 'lucide-angular';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-workflow',
@@ -9,40 +18,85 @@ import { Inbox, ListChecks, Zap, Rocket } from 'lucide-angular';
   templateUrl: './workflow.component.html',
   styleUrl: './workflow.component.scss'
 })
-export class WorkflowComponent {
-  protected readonly Inbox = Inbox;
+export class WorkflowComponent implements AfterViewInit {
+  private readonly el: HTMLElement = inject(ElementRef<HTMLElement>).nativeElement;
+
+  protected readonly Lightbulb = Lightbulb;
   protected readonly ListChecks = ListChecks;
   protected readonly Zap = Zap;
   protected readonly Rocket = Rocket;
+  protected readonly ChevronDown = ChevronDown;
 
   protected readonly steps = [
     {
       number: '01',
-      icon: Inbox,
-      title: 'Capture',
-      body: 'Turn Slack threads, emails and hallway talks into tasks in one click. Nothing gets lost in the noise.',
-      tint: 'from-accent/25 to-accent/5 text-accent-soft'
+      icon: Lightbulb,
+      title: 'Ideas',
+      body: 'Capture thoughts, requests and stray threads as tasks the moment they show up. Nothing disappears in the noise.'
     },
     {
       number: '02',
       icon: ListChecks,
-      title: 'Plan',
-      body: 'Prioritize on boards, scope in sprints and agree on dates — all in the same place you work.',
-      tint: 'from-sky-500/25 to-sky-500/5 text-sky-300'
+      title: 'Planning',
+      body: 'Break big goals into boards, sprints and dates — visible to everyone, no status meetings required.'
     },
     {
       number: '03',
       icon: Zap,
-      title: 'Execute',
-      body: 'Assign owners, move cards, attach files and discuss inline. Momentum never leaves the workspace.',
-      tint: 'from-amber-500/25 to-amber-500/5 text-amber-300'
+      title: 'Execution',
+      body: 'Move work forward with clear owners, live updates and discussion inline. Momentum never leaves the workspace.'
     },
     {
       number: '04',
       icon: Rocket,
-      title: 'Ship & learn',
-      body: 'Track velocity, review what shipped and carry lessons into the next cycle. A loop, not a deadline.',
-      tint: 'from-emerald-500/25 to-emerald-500/5 text-emerald-300'
+      title: 'Launch',
+      body: 'Ship, celebrate and carry every lesson into the next cycle. A loop, not a deadline.'
     }
   ];
+
+  ngAfterViewInit(): void {
+    const mm = gsap.matchMedia();
+    const sec = this.el;
+
+    mm.add({ all: 1, reduced: '(prefers-reduced-motion: reduce)' }, (ctx) => {
+      const { reduced } = ctx.conditions as { reduced: boolean };
+      if (reduced) {
+        sec.querySelectorAll<HTMLElement>('.wf-card, .wf-ico, .wf-arrow, .wf-track-fill').forEach((el) => {
+          gsap.set(el, { clearProps: 'all' });
+        });
+        ScrollTrigger.refresh();
+        return;
+      }
+
+      const icons = sec.querySelectorAll<HTMLElement>('.wf-ico');
+      const cards = sec.querySelectorAll<HTMLElement>('.wf-card');
+      const arrows = sec.querySelectorAll<HTMLElement>('.wf-arrow');
+      const fill = sec.querySelector<HTMLElement>('.wf-track-fill');
+
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: sec, start: 'top 70%', toggleActions: 'play none none none' }
+      });
+
+      tl.fromTo(
+        fill,
+        { scaleY: 0 },
+        { scaleY: 1, duration: 1.4, ease: 'none', transformOrigin: 'top' }
+      )
+        .from(
+          icons,
+          { y: 28, opacity: 0, scale: 0.6, duration: 0.55, stagger: 0.22, ease: 'back.out(1.8)' },
+          '+=0.15'
+        )
+        .from(
+          cards,
+          { y: 36, opacity: 0, duration: 0.6, stagger: 0.22, ease: 'power3.out' },
+          '-=0.85'
+        )
+        .from(
+          arrows,
+          { scale: 0, opacity: 0, duration: 0.35, stagger: 0.22, ease: 'back.out(2.2)' },
+          '-=0.6'
+        );
+    });
+  }
 }
