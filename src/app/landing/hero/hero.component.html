@@ -178,7 +178,7 @@
 
           <div class="grid grid-cols-2 gap-3 p-3 sm:gap-4 sm:p-4">
             <div
-              class="hero-card relative flex flex-col overflow-hidden rounded-xl border border-line-soft bg-[#10182c] p-3 sm:p-4"
+              class="hero-card relative flex flex-col overflow-hidden rounded-xl border border-line-soft bg-[#10182c] px-2.5 py-3 sm:px-3 sm:py-4"
             >
               <div class="flex h-full flex-col">
                 <div class="mb-3 flex items-start justify-between gap-2">
@@ -196,38 +196,43 @@
                 </div>
               </div>
 
-              <div class="grid flex-1 grid-cols-3 gap-2">
-                <div *ngFor="let lane of board.lanes" class="flex min-w-0 flex-col">
-                  <div class="mb-1.5 flex items-center gap-1">
-                    <span [class]="'h-1.5 w-1.5 shrink-0 rounded-full ' + lane.dot"></span>
-                    <p class="truncate text-[10px] font-medium text-muted">{{ lane.name }}</p>
-                    <p class="ml-auto text-[10px] text-dim">{{ lane.tasks.length }}</p>
-                  </div>
-                  <div class="space-y-1.5">
-                    <div
-                      *ngFor="let task of lane.tasks"
-                      class="rounded-lg border border-line-soft bg-[#16203a] p-2"
-                    >
-                      <div class="flex items-center gap-1.5">
-                        <span [class]="'h-1.5 w-1.5 shrink-0 rounded-full ' + task.dot"></span>
-                        <p class="min-w-0 truncate text-[10px] font-medium leading-tight text-fg">
-                          {{ task.title }}
-                        </p>
-                      </div>
-                      <div class="mt-2 flex items-center justify-between">
-                        <span
-                          class="grid h-4 w-4 place-items-center rounded-full text-[7px] font-bold text-white ring-1 ring-[#16203a]"
-                          [class]="task.initialsClass"
-                          >{{ task.initials }}</span
-                        >
-                        <span
-                          class="rounded border border-line-soft bg-white/5 px-1 py-px text-[8px] text-dim"
-                          >{{ task.tag }}</span
-                        >
-                      </div>
+              <div class="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+                <span
+                  *ngFor="let lane of board.lanes"
+                  class="flex items-center gap-1"
+                >
+                  <span [class]="'h-1.5 w-1.5 shrink-0 rounded-full ' + lane.dot"></span>
+                  <span class="text-[10px] font-medium text-muted"
+                    >{{ lane.name }}: {{ lane.tasks.length }}</span
+                  >
+                </span>
+              </div>
+
+              <div class="grid flex-1 grid-cols-2 gap-1.5">
+                <ng-container *ngFor="let lane of board.lanes">
+                  <div
+                    *ngFor="let task of lane.tasks"
+                    class="rounded-lg border border-line-soft bg-[#16203a] p-2"
+                  >
+                    <div class="flex items-center gap-1.5">
+                      <span [class]="'h-1.5 w-1.5 shrink-0 rounded-full ' + task.dot"></span>
+                      <p class="min-w-0 truncate text-[10px] font-medium leading-tight text-fg">
+                        {{ task.title }}
+                      </p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                      <span
+                        class="grid h-4 w-4 place-items-center rounded-full text-[7px] font-bold text-white ring-1 ring-[#16203a]"
+                        [class]="task.initialsClass"
+                        >{{ task.initials }}</span
+                      >
+                      <span
+                        class="rounded border border-line-soft bg-white/5 px-1 py-px text-[8px] text-dim"
+                        >{{ task.tag }}</span
+                      >
                     </div>
                   </div>
-                </div>
+                </ng-container>
               </div>
             </div>
 

@@ -87,15 +87,15 @@ export class HeroComponent {
         dot: 'bg-dim',
         tasks: [
           {
-            title: 'Onboarding docs',
-            tag: 'Des',
+            title: 'Onboarding',
+            tag: 'Design',
             dot: 'bg-sky-400',
             initials: 'MP',
             initialsClass: AVATARS[0],
           },
           {
-            title: 'Empty state art',
-            tag: 'Des',
+            title: 'Empty state',
+            tag: 'Design',
             dot: 'bg-sky-400',
             initials: 'SO',
             initialsClass: AVATARS[1],
@@ -107,7 +107,7 @@ export class HeroComponent {
         dot: 'bg-accent',
         tasks: [
           {
-            title: 'Drag & drop reorder',
+            title: 'Drag & drop',
             tag: 'Dev',
             dot: 'bg-violet-400',
             initials: 'KW',
@@ -120,7 +120,7 @@ export class HeroComponent {
         dot: 'bg-emerald-400',
         tasks: [
           {
-            title: 'V1 design tokens',
+            title: 'design tokens',
             tag: 'Dev',
             dot: 'bg-violet-400',
             initials: 'MC',
