@@ -72,30 +72,35 @@ export class WorkflowComponent implements AfterViewInit {
       const cards = sec.querySelectorAll<HTMLElement>('.wf-card');
       const arrows = sec.querySelectorAll<HTMLElement>('.wf-arrow');
       const fill = sec.querySelector<HTMLElement>('.wf-track-fill');
+      const rail = sec.querySelector<HTMLElement>('.wf-rail') ?? sec;
 
       const tl = gsap.timeline({
-        scrollTrigger: { trigger: sec, start: 'top 70%', toggleActions: 'play none none none' }
+        scrollTrigger: { trigger: rail, start: 'top 88%', once: true }
       });
 
       tl.fromTo(
         fill,
         { scaleY: 0 },
-        { scaleY: 1, duration: 1.4, ease: 'none', transformOrigin: 'top' }
+        { scaleY: 1, duration: 1.4, ease: 'none', transformOrigin: 'top' },
+        0
       )
-        .from(
-          icons,
-          { y: 28, opacity: 0, scale: 0.6, duration: 0.55, stagger: 0.22, ease: 'back.out(1.8)' },
-          '+=0.15'
-        )
-        .from(
+        .fromTo(
           cards,
-          { y: 36, opacity: 0, duration: 0.6, stagger: 0.22, ease: 'power3.out' },
-          '-=0.85'
+          { y: 36, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: 0.6, stagger: 0.18, ease: 'power3.out' },
+          0.5
         )
-        .from(
+        .fromTo(
+          icons,
+          { y: 28, autoAlpha: 0, scale: 0.6 },
+          { y: 0, autoAlpha: 1, scale: 1, duration: 0.55, stagger: 0.18, ease: 'back.out(1.8)' },
+          0.9
+        )
+        .fromTo(
           arrows,
-          { scale: 0, opacity: 0, duration: 0.35, stagger: 0.22, ease: 'back.out(2.2)' },
-          '-=0.6'
+          { scale: 0, autoAlpha: 0 },
+          { scale: 1, autoAlpha: 1, duration: 0.35, stagger: 0.18, ease: 'back.out(2.2)' },
+          1.3
         )
         .eventCallback('onComplete', () => {
           sec.querySelectorAll<HTMLElement>('.wf-card, .wf-ico, .wf-arrow, .wf-track-fill').forEach((el) => {
