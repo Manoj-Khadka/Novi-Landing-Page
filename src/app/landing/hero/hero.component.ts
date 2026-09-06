@@ -11,7 +11,7 @@ import {
   Smile,
   Send,
   CalendarDays,
-  Clock
+  Clock,
 } from 'lucide-angular';
 
 interface LaneTask {
@@ -55,14 +55,14 @@ const AVATARS = [
   'bg-gradient-to-br from-amber-400 to-orange-600',
   'bg-gradient-to-br from-emerald-400 to-teal-600',
   'bg-gradient-to-br from-fuchsia-400 to-purple-600',
-  'bg-gradient-to-br from-rose-400 to-pink-600'
+  'bg-gradient-to-br from-rose-400 to-pink-600',
 ];
 
 @Component({
   selector: 'app-hero',
   imports: [CommonModule, LucideAngularModule],
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  styleUrl: './hero.component.scss',
 })
 export class HeroComponent {
   protected readonly ArrowRight = ArrowRight;
@@ -91,16 +91,16 @@ export class HeroComponent {
             tag: 'Design',
             dot: 'bg-sky-400',
             initials: 'MP',
-            initialsClass: AVATARS[0]
+            initialsClass: AVATARS[0],
           },
           {
             title: 'Empty state art',
             tag: 'Design',
             dot: 'bg-sky-400',
             initials: 'SO',
-            initialsClass: AVATARS[1]
-          }
-        ]
+            initialsClass: AVATARS[1],
+          },
+        ],
       },
       {
         name: 'Progress',
@@ -111,9 +111,9 @@ export class HeroComponent {
             tag: 'Dev',
             dot: 'bg-violet-400',
             initials: 'KW',
-            initialsClass: AVATARS[2]
-          }
-        ]
+            initialsClass: AVATARS[2],
+          },
+        ],
       },
       {
         name: 'Done',
@@ -124,11 +124,11 @@ export class HeroComponent {
             tag: 'Dev',
             dot: 'bg-violet-400',
             initials: 'MC',
-            initialsClass: AVATARS[4]
-          }
-        ]
-      }
-    ] as Lane[]
+            initialsClass: AVATARS[4],
+          },
+        ],
+      },
+    ] as Lane[],
   };
 
   protected readonly chat = {
@@ -137,25 +137,25 @@ export class HeroComponent {
       {
         initials: 'MT',
         avatarClass: AVATARS[0],
-        name: 'Maya',
+        name: 'Manoj',
         time: '09:41',
-        text: 'Can we review the mobile flow at 2?'
+        text: 'Can we review the mobile flow at 2?',
       },
       {
         initials: 'DO',
         avatarClass: AVATARS[4],
-        name: 'Daniel',
+        name: 'Sushank',
         time: '09:43',
-        text: 'Ship target moved to Friday — updated the board.'
+        text: 'Ship target moved to Friday — updated the board.',
       },
       {
         initials: 'AS',
         avatarClass: AVATARS[2],
-        name: 'Ada',
+        name: 'Gaurav',
         time: '09:46',
-        text: 'LGTM. I added the launch checklist.'
-      }
-    ] as ChatMsg[]
+        text: 'LGTM. I added the launch checklist.',
+      },
+    ] as ChatMsg[],
   };
 
   protected readonly progress = {
@@ -165,8 +165,8 @@ export class HeroComponent {
       { label: 'Mobile App', value: 72, barClass: 'from-accent to-accent-soft' },
       { label: 'Brand Identity', value: 45, barClass: 'from-accent-cyan to-sky-400' },
       { label: 'Onboarding', value: 88, barClass: 'from-emerald-400 to-teal-500' },
-      { label: 'Analytics', value: 22, barClass: 'from-dim to-muted' }
-    ] as ProgressRow[]
+      { label: 'Analytics', value: 22, barClass: 'from-dim to-muted' },
+    ] as ProgressRow[],
   };
 
   protected readonly deadlines = {
@@ -178,22 +178,22 @@ export class HeroComponent {
         sub: 'Release 2.0 · due Fri',
         priorityClass: 'High',
         iconName: CalendarDays,
-        iconClass: 'text-accent-soft'
+        iconClass: 'text-accent-soft',
       },
       {
         label: 'QA handoff',
         sub: 'Mobile polish · due Mon',
         priorityClass: 'Medium',
         iconName: Clock,
-        iconClass: 'text-sky-300'
+        iconClass: 'text-sky-300',
       },
       {
         label: 'Release notes',
         sub: 'Docs · due Nov 20',
         priorityClass: 'Low',
         iconName: CalendarDays,
-        iconClass: 'text-emerald-300'
-      }
-    ] as DeadlineRow[]
+        iconClass: 'text-emerald-300',
+      },
+    ] as DeadlineRow[],
   };
 }
