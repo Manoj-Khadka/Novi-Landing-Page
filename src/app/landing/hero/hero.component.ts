@@ -135,21 +135,21 @@ export class HeroComponent {
     title: 'Team Chat',
     messages: [
       {
-        initials: 'MT',
+        initials: 'MK',
         avatarClass: AVATARS[0],
         name: 'Manoj',
         time: '09:41',
         text: 'Can we review the mobile flow at 2?',
       },
       {
-        initials: 'DO',
+        initials: 'SC',
         avatarClass: AVATARS[4],
         name: 'Sushank',
         time: '09:43',
         text: 'Ship target moved to Friday — updated the board.',
       },
       {
-        initials: 'AS',
+        initials: 'GK',
         avatarClass: AVATARS[2],
         name: 'Gaurav',
         time: '09:46',
